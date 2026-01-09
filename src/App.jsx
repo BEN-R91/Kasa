@@ -1,6 +1,7 @@
 import "./App.css";
 import { Link } from "react-router-dom";
 import { AppRouter } from "@/router";
+import { Footer } from "@/components/Footer";
 
 const App = () => {
   return (
@@ -14,6 +15,8 @@ const App = () => {
       </nav>
 
       <AppRouter />
+
+      <Footer />
     </>
   );
 };
