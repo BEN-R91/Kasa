@@ -1,5 +1,5 @@
-import './index.css'
+import "./index.css";
 
 export const Home = () => {
-  return <h2>Home</h2>;
-}
+  return <h1>Home</h1>;
+};
