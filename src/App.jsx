@@ -1,24 +1,19 @@
 import "./App.css";
-import { Link } from "react-router-dom";
 import { AppRouter } from "@/router";
-import { Footer } from "@/components/Footer";
+import { HeaderNav } from "@/components/HeaderNav/index.jsx";
+import { FooterCopyright } from "@/components/FooterCopyright/index.jsx";
 
-const App = () => {
+export const App = () => {
   return (
     <>
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/a-propos">À propos</Link></li>
-          <li><Link to="/fiche-logement/123">Fiche logement</Link></li>
-        </ul>
-      </nav>
+      <HeaderNav />
 
-      <AppRouter />
+      <main>
+        <AppRouter />
+      </main>
 
-      <Footer />
+      <FooterCopyright />
     </>
   );
 };
 
-export default App
