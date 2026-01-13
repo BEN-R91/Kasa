@@ -1,0 +1,32 @@
+header {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.8rem 6.2rem;
+
+    menu {
+      display: flex;
+      gap: 4rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      a {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: black;
+      }
+
+      a:visited {
+        color: black;
+      }
+
+      a[aria-current="page"] {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,13 +1,17 @@
 import "./index.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import logo from "@/assets/LogoHeader.svg";
 
 export const HeaderNav = () => {
   return (
-    <nav>
-      <menu>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/a-propos">À propos</Link></li>
-      </menu>
-    </nav>
+    <header>
+      <nav>
+        <img src={logo} alt="Kasa" />
+        <menu>
+          <li><NavLink to="/">Accueil</NavLink></li>
+          <li><NavLink to="/a-propos">À propos</NavLink></li>
+        </menu>
+      </nav>
+    </header>
   );
 };

@@ -1,5 +1,5 @@
 import "./index.css";
-import logo from "@/assets/LOGO.svg";
+import logo from "@/assets/LogoFooter.svg";
 
 export const FooterCopyright = () => {
   return (
