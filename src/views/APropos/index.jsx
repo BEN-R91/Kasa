@@ -4,8 +4,8 @@ import bannerAbout from "@/assets/BannerAbout.svg";
 
 export const APropos = () => {
   return (
-    <section>
+    <figure>
       <Banner src={bannerAbout} alt="Bannière de la page À propos"/>
-    </section>
+    </figure>
   );
 };

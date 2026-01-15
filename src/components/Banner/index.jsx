@@ -1,10 +1,11 @@
 import "./index.css";
 
-export const Banner = ({ src, alt }) => {
+export const Banner = ({ src, alt, title }) => {
   return (
-    <section>
-      <img src={src} alt={alt} />
-    </section>
+  <figure>
+    <img src={src} alt={alt} />
+    <figcaption>{title}</figcaption>
+</figure>
   );
 };
 

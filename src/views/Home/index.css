@@ -1,0 +1,12 @@
+section {
+  background: #f6f6f6;
+  border-radius: 25px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+
+  margin-top: 3rem;
+  padding: 3.4rem 3.12rem;
+}
