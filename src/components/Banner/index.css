@@ -1,16 +1,16 @@
-figure {
+.banner {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 6.2rem;
     
     img {
         height: 14rem;
         border-radius: 1.6rem;
         filter: brightness(50%);
-        position: relative;
+        width: 100%;
+        object-fit: cover;
     }
-
+    
     figcaption {
         font-family: "Montserrat", sans-serif;
         font-weight: 700;

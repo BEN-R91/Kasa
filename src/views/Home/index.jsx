@@ -11,11 +11,10 @@ export const Home = () => {
     <>
       <Banner
         src={homeBanner}
-        alt="Bannière accueil"
         title="Chez vous, partout et ailleurs"
       />
 
-      <section>
+      <section className="cards-home">
         {logements.slice(0, 6).map((logement) => (  //*pas besoin de return ""=>"" 
           <CardHome
             key={logement.id}

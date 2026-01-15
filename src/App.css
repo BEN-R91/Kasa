@@ -8,13 +8,16 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-
+  
   main {
     flex-grow: 1;
   }
 }
 
 main {
-  padding: 2.8rem 6.25rem;
+  width: 100%;  
+  max-width: 1240px;
+  margin-block-start: 1.5rem;
+  margin-inline: auto;
 }
 

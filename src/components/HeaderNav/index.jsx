@@ -6,7 +6,7 @@ export const HeaderNav = () => {
   return (
     <header>
       <nav>
-        <img src={logo} alt="Kasa" />
+        <img src={logo} alt="" />
         <menu>
           <li><NavLink to="/">Accueil</NavLink></li>
           <li><NavLink to="/a-propos">À propos</NavLink></li>
