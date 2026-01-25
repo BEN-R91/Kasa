@@ -1,6 +1,6 @@
 import "./index.css";
-import { Banner } from "@/components/Banner/index.jsx";
-import { Collapse } from "@/components/Collapse/index.jsx";
+import { Banner } from "@/components/Banner";
+import { Collapse } from "@/components/Collapse";
 import bannerAbout from "@/assets/BannerAbout.svg";
 
 export const APropos = () => {
@@ -8,7 +8,7 @@ export const APropos = () => {
     <>
       <Banner src={bannerAbout} />
 
-      <section>
+      <section className="about-container">
         <Collapse title="Fiabilité">
           <p>
             Les annonces postées sur Kasa garantissent une fiabilité totale.
@@ -20,23 +20,24 @@ export const APropos = () => {
         <Collapse title="Respect">
           <p>
             La bienveillance fait partie des valeurs fondatrices de Kasa.
-            Tout comportement discriminatoire ou perturbateur entraînera
-            une exclusion de notre plateforme.
+            Tout comportement discriminatoire ou de pertubation du voisinage
+            entrainera une exclusion de notre plateforme.
           </p>
         </Collapse>
 
         <Collapse title="Service">
           <p>
-            Nos équipes sont à votre écoute pour vous fournir une expérience
+            Nos équipes se tiennent à votre disposition pour vous fournir une expérience
             parfaite. N’hésitez pas à nous contacter si vous avez la moindre question.
           </p>
         </Collapse>
 
         <Collapse title="Sécurité">
           <p>
-            La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que
-            pour les voyageurs, chaque logement respecte les critères de sécurité
-            établis par nos services.
+            La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, 
+            chaque logement correspond aux critères de sécurité établis par nos services. 
+            En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. 
+            Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.
           </p>
         </Collapse>
       </section>
