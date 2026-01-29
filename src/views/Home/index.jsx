@@ -15,14 +15,13 @@ export const Home = () => {
       />
 
       <section className="cards-home">
-        {logements.slice(0, 6).map((logement) => (  //*pas besoin de return ""=>"" 
-          <CardHome
-            key={logement.id}
-            title={logement.title}
-            cover={logement.cover}
-          />
+        {logements.slice(0, 6).map((logement) => (
+          <CardHome key={logement.id}
+                    id={logement.id} 
+                    title={logement.title} 
+                    cover={logement.cover} /> 
         ))}
-      </section>
+      </section>  
     </>
   );
 };
