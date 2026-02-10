@@ -4,7 +4,7 @@ import logo from "@/assets/LogoHeader.svg";
 
 export const HeaderNav = () => {
   return (
-    <header>
+    <header className="main-header">
       <nav>
         <img src={logo} alt="" />
         <menu>
