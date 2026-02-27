@@ -3,32 +3,24 @@ import { useEffect, useRef, useState } from "react";
 
 export const Carrousel = ({ logement }) => {
   const carousel = useRef(null);
-  const prevBtn = useRef(null);
-  const nextBtn = useRef(null);
-
   const [index, setIndex] = useState(0);
 
   const scrollOneSlide = (direction) => {
-    const slideWidth = carousel.current.clientWidth;
+    const el = carousel.current;
+    if (!el) return;
 
-    carousel.current.scrollBy({
-      left: direction * slideWidth,
+    const total = logement.pictures.length;
+    const slideWidth = el.clientWidth;
+
+    const nextIndex = (index + direction + total) % total; //*************************   JO */
+
+    el.scrollTo({
+      left: nextIndex * slideWidth,
       behavior: "smooth",
     });
+
+    setIndex(nextIndex);
   };
-
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === "ArrowRight") scrollOneSlide(1);
-      if (e.key === "ArrowLeft") scrollOneSlide(-1);
-    };
-
-    document.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
 
   useEffect(() => {
     const el = carousel.current;
@@ -41,23 +33,20 @@ export const Carrousel = ({ logement }) => {
     };
 
     el.addEventListener("scroll", handleScroll);
-
-    return () => {
-      el.removeEventListener("scroll", handleScroll);
-    };
+    return () => el.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return (
+    return (
     <div className="carrousel">
-      <button ref={prevBtn} onClick={() => scrollOneSlide(-1)}>
-        <svg viewBox="0 0 47 80">
+      <button onClick={() => scrollOneSlide(-1)} aria-label="Image précédente">
+        <svg viewBox="0 0 47 80" aria-hidden="true">
           <path d="M0 72.12L7.08 79.2L46.68 39.6L7.08 0L0 7.08L32.52 39.6L0 72.12Z" />
         </svg>
       </button>
 
       <ul ref={carousel}>
-        {logement.pictures.map((picture, index) => (
-          <li key={index}>
+        {logement.pictures.map((picture, i) => (
+          <li key={i}>
             <img src={picture} alt="" />
           </li>
         ))}
@@ -67,8 +56,8 @@ export const Carrousel = ({ logement }) => {
         {index + 1} / {logement.pictures.length}
       </span>
 
-      <button ref={nextBtn} onClick={() => scrollOneSlide(1)}>
-        <svg viewBox="0 0 47 80">
+      <button onClick={() => scrollOneSlide(1)} aria-label="Image suivante">
+        <svg viewBox="0 0 47 80" aria-hidden="true">
           <path d="M0 72.12L7.08 79.2L46.68 39.6L7.08 0L0 7.08L32.52 39.6L0 72.12Z" />
         </svg>
       </button>
