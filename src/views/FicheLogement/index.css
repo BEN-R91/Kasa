@@ -29,19 +29,29 @@
 
         aside {
           img {
-          width: 64px;
-          height: 64px;
-          border-radius: 50%;
-          object-fit: cover;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          p {
+            font-family: "Montserrat", sans-serif;
+            font-size: 18px;
+            color: #FF6060;
           }
         }
 
+        ul {
+          display: flex;
+        }
+      
         .rating {
           display: flex;
           gap: 6px;
 
           .star {
-            font-size: 20px;
+            font-size: 24px;
             color: #e3e3e3;
           }
 
@@ -49,6 +59,20 @@
             color: #ff6060;
           }
         }
+      }
+    }
+
+    .fiche-logement-collapses {
+      display: flex;
+      justify-content: space-between;
+      gap:75px;
+
+      .collapse-logement {
+       width: min(100%, 582px);
+
+       p {
+        font-size: 40px;
+       }
       }
     }
 }

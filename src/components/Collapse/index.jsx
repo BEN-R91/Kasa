@@ -1,17 +1,15 @@
 import "./index.css";
 import arrow from "@/assets/ArrowCollapse.svg";
 
-export const Collapse = ({ title, children }) => {
+export const Collapse = ({ title, children, className = "" }) => {
   return (
-    <details>
+    <details className={className}>
       <summary>
         <h2>{title}</h2>
         <img src={arrow} alt="" />
       </summary>
 
-      <div>
-        {children}
-      </div>
+      <div>{children}</div>
     </details>
   );
 };

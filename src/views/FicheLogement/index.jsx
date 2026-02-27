@@ -54,11 +54,11 @@ export const FicheLogement = () => {
       </header>
 
       <div className="fiche-logement-collapses">
-        <Collapse title="Description">
+        <Collapse className="collapse-logement" title="Description">
           <p>{logement.description}</p>
         </Collapse>
 
-        <Collapse title="Équipements">
+        <Collapse className="collapse-logement" title="Équipements">
           <ul>
             {logement.equipments.map((eq) => (<li key={eq}>{eq}</li>))} 
           </ul>
