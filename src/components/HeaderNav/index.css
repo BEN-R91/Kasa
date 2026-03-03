@@ -2,39 +2,58 @@
   display: flex;
   justify-content: center;
   margin-block-start: 1.5rem;
-  
-  @media (width > 768px) {
-    margin-block-start: 2rem;
-  }
-  
+
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;  
-    max-width: 1240px;
+    width: 100%;
+    max-width: 77.5rem;
     margin-inline: 1.5rem;
-    
+
+    img {
+      width: 9.05rem;
+      height: auto;
+    }
+
     menu {
       display: flex;
-      gap: 4rem;
+      gap: 1rem;
       list-style: none;
       padding: 0;
       margin: 0;
-      
+
+      @media (width > 48rem) {
+        gap: 4rem;
+      }
+
       a {
         font-family: "Montserrat", sans-serif;
-        font-size: 1.5rem;
+        font-size: 1rem;
         text-decoration: none;
         color: black;
-        
+
         &:visited {
           color: black;
         }
-        
+
         &[aria-current="page"] {
           text-decoration: underline;
         }
+      }
+    }
+  }
+
+  @media (width > 48rem) {
+    margin-block-start: 2rem;
+
+    nav {
+      img {
+        width: 13.15rem;
+      }
+
+      menu a {
+        font-size: 1.5rem;
       }
     }
   }

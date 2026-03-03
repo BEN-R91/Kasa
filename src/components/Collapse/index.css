@@ -48,6 +48,10 @@ details {
   
   div {
     p {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.125rem;
+      line-height: 1.4;
+      padding: 1rem 1rem 0 1rem;
       min-height: 0;
     }
   }

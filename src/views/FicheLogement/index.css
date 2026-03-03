@@ -1,109 +1,122 @@
 .fiche-logement {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 3.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3.25rem;
+  
+  header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title title" "tags tags" "notation host";
 
-    header {
-      width: 100%;
+    @media (width > 48rem) {
+      grid-template-areas: "title host" "tags notation";
+    }
+    
+    hgroup {
+      grid-area: title;
 
-      > div {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-
-        hgroup {
-          h1 {
-            font-family: "Montserrat", sans-serif;
-            font-size: 36px;
-            font-weight: 500;
-            color: #FF6060;
-          }
-
-          p {
-            font-family: "Montserrat", sans-serif;
-            font-size: 18px;
-            font-weight: 500;
-            color: black;
-          }
-        }
-
-        aside {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 5px;
-          
-          img {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            object-fit: cover;
-          }
-
-          p {
-            font-family: "Montserrat", sans-serif;
-            font-size: 18px;
-            color: #FF6060;
-          }
-        }
-
-        ul {
-          display: flex;
-          justify-content: space-between;
-          gap: .75rem;
-          list-style: none;
-          margin-block: 1.25rem 1.25rem;
-
-          li {
-            font-family: "Montserrat", sans-serif;
-            font-weight: 700;
-            color: white;
-            background-color: #FF6060;
-            border-radius: 10px;
-            padding: 0px 2rem;
-            height: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-
-        }
+      h1 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 2.250rem;
+        font-weight: 500;
+        color: #FF6060;
+      }
       
-        .rating {
-          display: flex;
-          gap: 6px;
-
-          .star {
-            font-size: 24px;
-            color: #e3e3e3;
-          }
-
-          .star.star--full {
-            color: #ff6060;
-          }
-        }
+      p {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.125rem;
+        font-weight: 500;
+        color: black;
       }
     }
-
-    .fiche-logement-collapses {
+    
+    aside {
+      grid-area: host;
       display: flex;
-      justify-content: space-between;
-      gap:75px;
-
-      .collapse-logement {
-       width: min(100%, 582px);
-       font-size: 18px;
-
-       p {
-        margin-top: 1.25rem;
-
-       }
-
-       ul {
-        margin-top: 1.25rem;
-        
-       }
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.3rem;
+      
+      img {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      
+      p {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.125rem;
+        color: #FF6060;
+        text-align: end;
       }
     }
+     
+    ul {
+      grid-area: tags;
+      display: flex;
+      justify-content: flex-start;
+      gap: .75rem;
+      list-style: none;
+      margin-block: 1.25rem 1.25rem;
+      
+      li {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        color: white;
+        background-color: #FF6060;
+        border-radius: 0.625rem;
+        padding: 0 2rem;
+        height: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+    }
+    
+    .rating {
+      grid-area: notation;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 0.375rem;
+
+      @media (width > 48rem) {
+        grid-template-areas: "title host" "tags notation";
+        justify-content: flex-end;
+      }
+      
+      .star {
+        font-size: 1.5rem;
+        color: #e3e3e3;
+      }
+      
+      .star.star--full {
+        color: #ff6060;
+      }
+    }
+  }
+  
+  .fiche-logement-collapses {
+    display: flex;
+    justify-content: space-between;
+    gap:4.7rem;
+    
+    .collapse-logement {
+      width: min(100%, 36.5rem);
+      font-size: 1.125rem;
+      
+      ul {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.125rem;
+        line-height: 1.4;
+        padding: 1rem 1rem 0 1rem;
+        list-style: none;
+        
+      }
+    }
+  }
 }

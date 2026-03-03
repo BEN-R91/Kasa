@@ -20,8 +20,9 @@
 
 main {
   width: 100%;  
-  max-width: 1240px;
+  max-width: 79rem;
   margin-block-start: 1.5rem;
   margin-inline: auto;
+  padding: 1rem;
 }
 

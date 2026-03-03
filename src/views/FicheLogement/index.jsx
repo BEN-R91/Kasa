@@ -17,39 +17,35 @@ export const FicheLogement = () => {
       <Carrousel logement={logement} />
 
       <header>
-        <div>
-          <hgroup>
-            <h1>{logement.title}</h1>
-            <p>{logement.location}</p>
-          </hgroup>
+        <hgroup>
+          <h1>{logement.title}</h1>
+          <p>{logement.location}</p>
+        </hgroup>
 
-          <aside>
-            <p>{logement.host.name}</p>
-            <img
-              src={logement.host.picture}
-              alt=""
-            />
-          </aside>
-        </div>
+        <aside>
+          <p>{logement.host.name}</p>
+          <img
+            src={logement.host.picture}
+            alt=""
+          />
+        </aside>
 
-        <div>
-          <ul>
-            {logement.tags.map((tag) => (
-              <li key={tag}>{tag}</li>
-            ))}
-          </ul>
+        <ul>
+          {logement.tags.map((tag) => (
+            <li key={tag}>{tag}</li>
+          ))}
+        </ul>
 
-          <div className="rating" aria-label={`Note de ${rating} sur 5`}>
-            {[1, 2, 3, 4, 5].map((star) => ( //pour chaque nombre de 1 à 5 on crée une étoile, on pourra ensuite comparer star au rating puisque c' est un Number et appliquer la class corréspondante 
-              <span
-                key={star}
-                className={star <= rating ? "star star--full" : "star"}
-                aria-hidden="true"
-              >
-                  ★
-              </span>
-            ))}
-          </div>
+        <div className="rating" aria-label={`Note de ${rating} sur 5`}>
+          {[1, 2, 3, 4, 5].map((star) => ( //pour chaque nombre de 1 à 5 on crée une étoile, on pourra ensuite comparer star au rating puisque c' est un Number et appliquer la class corréspondante 
+            <span
+              key={star}
+              className={star <= rating ? "star star--full" : "star"}
+              aria-hidden="true"
+            >
+                ★
+            </span>
+          ))}
         </div>
       </header>
 

@@ -1,7 +1,7 @@
 article {
-  width: 340px;
-  height: 340px;
-  border-radius: 10px;
+  width: 20.95rem;
+  height: 15.95rem;
+  border-radius: 0.625rem;
   overflow: hidden;
   position: relative;
 
@@ -17,9 +17,13 @@ article {
     left: 1rem;
     bottom: 1rem;
     margin: 0;
-
     color: white;
     font-family: "Montserrat", sans-serif;
-    font-size: 18px;
+    font-size: 1.125rem;
+  }
+
+  @media (width > 48rem) {
+    width: 21.25rem;
+    height: 21.25rem;
   }
 }

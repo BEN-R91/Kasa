@@ -5,7 +5,7 @@ export const FooterCopyright = () => {
   return (
     <footer>
       <img src={logo} alt="Kasa"/>
-      <p>© 2020 Kasa. All rights reserved</p>
+      <p><span>© 2020 Kasa.</span><span>All rights reserved</span></p>
     </footer>
   );
 };
