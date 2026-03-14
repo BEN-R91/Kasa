@@ -3,80 +3,103 @@
   flex-direction: column;
   gap: 1rem;
   margin-bottom: 3.25rem;
-  
+
   header {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "title title" "tags tags" "notation host";
+    grid-template-areas:
+      "title title"
+      "tags tags"
+      "notation host";
 
     @media (width > 48rem) {
-      grid-template-areas: "title host" "tags notation";
+      grid-template-areas:
+        "title host"
+        "tags notation";
     }
-    
+
     hgroup {
       grid-area: title;
 
       h1 {
-        font-family: "Montserrat", sans-serif;
-        font-size: 2.250rem;
+        font-size: 1.12rem;
         font-weight: 500;
         color: #FF6060;
+
+        @media (min-width: 48rem) {
+          font-size: 2.25rem;
+        }
       }
-      
+
       p {
-        font-family: "Montserrat", sans-serif;
-        font-size: 1.125rem;
+        font-size: 0.75rem;
         font-weight: 500;
         color: black;
+
+        @media (min-width: 48rem) {
+          font-size: 1.125rem;
+        }
       }
     }
-    
+
     aside {
       grid-area: host;
       display: flex;
       justify-content: flex-end;
       align-items: center;
       gap: 0.3rem;
-      
+
       img {
-        width: 4rem;
-        height: 4rem;
+        width: 2rem;
+        height: 2rem;
         border-radius: 50%;
         object-fit: cover;
+
+        @media (min-width: 48rem) {
+          width: 4rem;
+          height: 4rem;
+        }
       }
-      
+
       p {
-        font-family: "Montserrat", sans-serif;
-        font-size: 1.125rem;
+        font-size: 0.75rem;
         color: #FF6060;
         text-align: end;
+
+        @media (min-width: 48rem) {
+          font-size: 1.125rem;
+        }
       }
     }
-     
+
     ul {
       grid-area: tags;
       display: flex;
       justify-content: flex-start;
-      gap: .75rem;
+      gap: 0.75rem;
       list-style: none;
-      margin-block: 1.25rem 1.25rem;
-      
+      margin-block: 1.25rem;
+
       li {
-        font-family: "Montserrat", sans-serif;
         font-weight: 700;
         color: white;
         background-color: #FF6060;
         border-radius: 0.625rem;
-        padding: 0 2rem;
+        padding-inline: 1rem;
         height: 1.5rem;
         display: flex;
         align-items: center;
         justify-content: center;
+        font-size: 0.75rem;
+
+        @media (min-width: 48rem) {
+          padding-inline: 2rem;
+          font-size: 1rem;
+        }
       }
-      
     }
-    
+
     .rating {
       grid-area: notation;
       display: flex;
@@ -85,37 +108,44 @@
       gap: 0.375rem;
 
       @media (width > 48rem) {
-        grid-template-areas: "title host" "tags notation";
+        grid-template-areas:
+          "title host"
+          "tags notation";
         justify-content: flex-end;
       }
-      
+
       .star {
-        font-size: 1.5rem;
+        font-size: 0.8rem;
         color: #e3e3e3;
+
+        @media (min-width: 48rem) {
+          font-size: 1.5rem;
+        }
       }
-      
+
       .star.star--full {
         color: #ff6060;
       }
     }
   }
-  
+
   .fiche-logement-collapses {
     display: flex;
-    justify-content: space-between;
-    gap:4.7rem;
-    
+    flex-direction: column;
+    gap: 1.25rem;
+
     .collapse-logement {
-      width: min(100%, 36.5rem);
+      width: 20.93rem;
       font-size: 1.125rem;
-      
-      ul {
-        font-family: "Montserrat", sans-serif;
-        font-size: 1.125rem;
-        line-height: 1.4;
-        padding: 1rem 1rem 0 1rem;
-        list-style: none;
-        
+    }
+
+    @media (width > 48rem) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 4.7rem;
+
+      .collapse-logement {
+        width: min(100%, 36.5rem);
       }
     }
   }
