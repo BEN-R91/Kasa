@@ -18,6 +18,6 @@ Vite
 HTML
 CSS
 Git / GitHub
-Objectif du projet
 
+Objectif du projet :
 Mettre en pratique le développement d’une application React structurée, réutilisable et responsive.
